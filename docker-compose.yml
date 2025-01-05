@@ -1,0 +1,13 @@
+services:
+  main-db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Maksim3228
+      - POSTGRES_DB=greenbox
+    volumes:
+      - main-db:/var/lib/postgresql/data
+volumes:
+  main-db:
