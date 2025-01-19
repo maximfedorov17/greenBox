@@ -36,7 +36,7 @@ export const CartContainer: React.FC<Props> = ({ classname }) => {
 			{isLoading && (
 				<Container className={cn('mt-4 grid grid-cols-4 gap-4', classname)}>
 					{Array.from({ length: 20 }).map((_, index) => (
-						<Skeleton key={index} className='h-[200px] w-full' />
+						<Skeleton key={index} className='h-[300px] w-full' />
 					))}
 				</Container>
 			)}
@@ -49,10 +49,12 @@ export const CartContainer: React.FC<Props> = ({ classname }) => {
 									name={item.name}
 									description={item.description}
 									price={item.price}
+									id={item.id}
 								/>
 						  )
 						: !types && (
 								<ItemCart
+									id={item.id}
 									key={item.id}
 									name={item.name}
 									description={item.description}
